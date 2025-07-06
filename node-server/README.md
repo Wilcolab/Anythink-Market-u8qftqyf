@@ -1,6 +1,6 @@
 # Express Server
 
-A simple Express.js server with no endpoints that listens on port 8001.
+A simple Express.js server with task management endpoints that listens on port 8001.
 
 ## Features
 
@@ -63,7 +63,13 @@ The server will be accessible at `http://localhost:8001`
 
 ## Adding Endpoints
 
-To add endpoints to the server, edit the `index.js` file and add routes before the `app.listen()` call:
+The server currently includes the following endpoints:
+
+- `GET /` - Returns "Hello World"
+- `GET /tasks` - Returns all tasks in JSON format
+- `POST /tasks` - Adds a new task (expects JSON body with `text` field)
+
+To add more endpoints to the server, edit the `index.js` file and add routes before the `app.listen()` call:
 
 ```javascript
 app.get('/api/health', (req, res) => {
